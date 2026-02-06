@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Stack(
+          alignment: Alignment.center,
           children: [
             //big box
             Container(height: 300, width: 300, color: const Color.fromARGB(255, 62, 14, 145)),
