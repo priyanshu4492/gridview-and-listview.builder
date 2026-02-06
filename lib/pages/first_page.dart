@@ -1,4 +1,6 @@
-import 'package:basics_08/pages/second_page.dart';
+import 'package:basics_08/pages/home_page.dart';
+import 'package:basics_08/pages/setting_page.dart';
+
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatelessWidget {
@@ -21,8 +23,21 @@ class FirstPage extends StatelessWidget {
             //common to place a drawer header here
             DrawerHeader(child: Icon(Icons.favorite, size: 50)),
             // home page list tile
-            ListTile(leading: Icon(Icons.home), title: Text("H O M E ")),
-            ListTile(leading: Icon(Icons.home), title: Text("S E T T I N G ")),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("H O M E "),
+              onTap: () {
+                //go to home page
+                Navigator.pushNamed(context, 'home_page');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("S E T T I N G "),
+              onTap: () {
+                Navigator.pushNamed(context, 'setting_page');
+              },
+            ),
             ListTile(leading: Icon(Icons.home), title: Text("M E N U E  ")),
           ],
         ),
@@ -31,10 +46,7 @@ class FirstPage extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
             //navigate to second page
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondPage()),
-            );
+            Navigator.pushNamed(context, 'first_page');
           },
           child: Text("navigate to second page"),
         ),
