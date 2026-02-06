@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: GridView.builder(
-          itemCount: 128,
+          itemCount: 64,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 8,
+            crossAxisCount: 1,
           ),
           itemBuilder: (context, index) =>
-              Container(color: Colors.deepPurple, margin: EdgeInsets.all(2)),
+              Container(color: Colors.deepPurple, margin: EdgeInsets.all(4)),
         ),
       ),
     );
